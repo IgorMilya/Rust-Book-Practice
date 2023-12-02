@@ -39,7 +39,7 @@ fn move_player(num_spaces: u8) {}
 
 
 fn main() {
-    let coin = value_in_cents(Coin::Dime);
+    let coin = value_in_cents(Coin::Quarter(UssState::Alaska));
 
     let five = Some(5);
     let six = plus_one(five);
@@ -72,7 +72,9 @@ fn main() {
     ///////////
 
     let mut count = 0;
-    match coin {
+    let coin = Coin::Quarter(UssState::Alaska);
+
+    match &coin {
         Coin::Quarter(state) => println!("State quarter from {:?}!", state),
         _ => count += 1,
     }
@@ -83,7 +85,4 @@ fn main() {
     } else {
         count += 1;
     }
-
-
-
 }
