@@ -39,4 +39,21 @@ fn main() {
     m.call();
 
     println!("{:?}", home);
+
+    ////////////////////////////////////////////////////////////////
+
+    let x: i8 = 5;
+    let y: Option<i8> = Some(5);
+
+    let sum = x + y.unwrap_or(0);
+
+
+    let ok_result: Result<i32, &str> = Ok(42);
+    let result = ok_result.unwrap_or_else(|err| {
+        println!("Error: {}", err);
+        -1
+    });
+
+    println!("Result: {}", result);  // Output: Result: 42
+
 }

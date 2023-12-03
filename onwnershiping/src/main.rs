@@ -106,19 +106,19 @@
 
 
 ////////////////////////////////////////////////////////////////
-// fn main() {
-//     let s = String::from("hello world");
-//
-//     let hello = &s[0..5];
-//     // let hello = &s[..5]; // same
-//     let world = &s[6..11];
-//     // let world = &s[6..]; // same
-//
-//     let len = s.len();
-//
-//     // let slice = &s[0..len]; // whole string
-//     // let slice = &s[..]; // same
-//
-//     println!("{}", hello);
-//     println!("{}", world);
-// }
+fn main() {
+    let s = String::from("hello world");
+
+    let hello = &s[0..5];
+    // let hello = &s[..5]; // same
+    let world = &s[6..11];
+    // let world = &s[6..]; // same
+
+    let len = s.len();
+
+    // let slice = &s[0..len]; // whole string
+    // let slice = &s[..]; // same
+
+    println!("{}", hello);
+    println!("{}", world);
+}
