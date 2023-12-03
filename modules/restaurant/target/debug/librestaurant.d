@@ -1,1 +1,0 @@
-I:\Rust\modules\restaurant\target\debug\librestaurant.rlib: I:\Rust\modules\restaurant\src\auth_utils\mod.rs I:\Rust\modules\restaurant\src\auth_utils\modules.rs I:\Rust\modules\restaurant\src\database.rs I:\Rust\modules\restaurant\src\lib.rs
