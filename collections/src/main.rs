@@ -56,19 +56,19 @@ fn main() {
 
     // STRINGS
 
-    let mut s = String::from("foo");
-    s.push_str("bar");
-    s.push('!');
-
-    println!("{}", s);
-
-
-    let s1 = String::from("Hello, ");
-    let s2 = String::from("world!");
+    // let mut s = String::from("foo");
+    // s.push_str("bar");
+    // s.push('!');
+    //
+    // println!("{}", s);
+    //
+    //
+    // let s1 = String::from("Hello, ");
+    // let s2 = String::from("world!");
     // let s3: String = s1 + &s2;
-    let s3: String = format!("{}{}", s1, s2);  // doesn't use the ownership
-
-    println!("{}", s3);
+    // let s3: String = format!("{}{}", s1, s2);  // doesn't use the ownership
+    //
+    // println!("{}", s3);
 
 
     // let hello: String = String::from("Hello");
@@ -77,23 +77,23 @@ fn main() {
     // println!("{}", c);
 
 
-    let hello2_0: String = String::from("China");
+    // let hello2_0: String = String::from("China");
 
     // Bytes
-    for b in "Cgina".bytes() {
-        println!("{}", b);
-    };
+    // for b in "Cgina".bytes() {
+    //     println!("{}", b);
+    // };
 
     // Scalar values
-    for c in "China2346ыфцв".chars() {
-        println!("{}", c);
-    }
+    // for c in "China2346ыфцв".chars() {
+    //     println!("{}", c);
+    // }
 
     // Grapheme clusters
 
-    for g in "China".graphemes(true) {
-        println!("{}", g);
-    }
+    // for g in "China".graphemes(true) {
+    //     println!("{}", g);
+    // }
 
     /////////////////////////////////////////////////////////////////////////
 
