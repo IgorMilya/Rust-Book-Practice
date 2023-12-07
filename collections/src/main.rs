@@ -95,6 +95,9 @@ fn main() {
     //     println!("{}", g);
     // }
 
+    // let s = "initial contents".to_string(); // equivalent
+    // let s = String::from("initial contents"); // equivalent
+
     /////////////////////////////////////////////////////////////////////////
 
     // HASHMAP
@@ -114,15 +117,13 @@ fn main() {
     //     println!("{}: {}", key, value);
     // };
 
-    ////////////////////////////////////////////////////////////////////////
-
     // let mut scores = HashMap::new();
     //
     // scores.insert(String::from("Blue"), 10);
     // scores.insert(String::from("Blue"), 20);
     //
-    // scores.entry(String::from("Yellow")).or_insert( 30);
-    // scores.entry(String::from("Yellow")).or_insert( 40);
+    // scores.entry(String::from("Yellow")).or_insert(30);
+    // scores.entry(String::from("Yellow")).or_insert(40);
     //
     // for (key, value) in &scores {
     //     println!("{}: {}", key, value);
@@ -130,18 +131,54 @@ fn main() {
 
     ////////////////////////////////////////////////////////////////////////
 
-    let text = "hello world wonderful world";
+    // let text = "hello world wonderful world";
+    //
+    // let mut map = HashMap::new();
+    //
+    // for word in text.split_whitespace() {
+    //     let count = map.entry(word).or_insert(0);
+    //     *count += 1;
+    // };
+    //
+    // println!("{:?}", map);
 
-    let mut map = HashMap::new();
+    ////////////////////////////////////////////////////////////////
 
-    for word in text.split_whitespace() {
-        let count = map.entry(word).or_insert(0);
-        *count += 1;
-    };
+    // let words = ["first", "apple", "banana", "orange", ""];
+    //
+    // for word in &words {
+    //     let pig_latin_word = pig_latin(word);
+    //     println!("{} in Pig Latin is: {}", word, pig_latin_word);
+    // }
 
-    println!("{:?}", map);
+    ////////////////////////////////////////////////////////////////////////
+
+    // let mut iterator = vec![1, 2, 3].into_iter();
+    //
+    // while let Some(element) = iterator.next() {
+    //     println!("Next element: {}", element);
+    // }
+
 }
 
+// fn pig_latin(word: &str) -> String {
+//     let vowels = ['a', 'e', 'i', 'o', 'u'];
+//
+//     let mut chars = word.chars();
+//     let first_char = chars.next();
+//
+//     match first_char {
+//         Some(c) if vowels.contains(&c.to_ascii_lowercase()) => format!("{}-hay", word),
+//         Some(_) => format!("{}-{}ay", chars.as_str(), first_char.unwrap()),
+//         None => String::from(word), // Handle empty string
+//     }
+//
+//     // match first_char.map(|c| c.to_lowercase().collect::<String>()) {
+//     //     Some(ref c) if vowels.contains(c.as_str()) => format!("{}-hay", word),
+//     //     Some(_) => format!("{}-{}ay", chars.as_str(), first_char.unwrap()),
+//     //     None => String::from(word), // Handle empty string
+//     // }
+// }
 
 
 
