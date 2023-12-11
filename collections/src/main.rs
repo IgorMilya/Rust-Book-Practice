@@ -1,5 +1,6 @@
 use unicode_segmentation::UnicodeSegmentation;
 use std::collections::HashMap;
+use std::convert::TryInto;
 
 fn main() {
     // VECTORS
@@ -158,6 +159,17 @@ fn main() {
     // while let Some(element) = iterator.next() {
     //     println!("Next element: {}", element);
     // }
+
+
+    // let my_array = vec![1, 2, 3];
+    //
+    // let transformed_array: Vec<i32> = my_array.iter()
+    //     .map(|&x| x * 2)
+    //     .collect();
+    //
+    // println!("{:?}", transformed_array);
+
+
 
 }
 
