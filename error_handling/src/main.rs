@@ -66,14 +66,12 @@ fn main() {
     // let string = read_username_from_file();
     //
     // println!("{:?}", string);
-
-
-
 }
 
 //Propagating Errors
 fn read_username_from_file() -> Result<String, io::Error> {
-    // ? symbol like .unwrap() method, but instead of panic return Err(err)
+    // ? symbol like .unwrap() method, but instead of panic return the Err variant is immediately
+    // returned from the function, and the remaining calculations are skipped.
 
     // First way
     // let mut username = String::new();
@@ -99,7 +97,6 @@ fn read_username_from_file() -> Result<String, io::Error> {
 
     // Third way
     fs::read_to_string("hello.txt")
-
 }
 
 
