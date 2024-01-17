@@ -1,6 +1,6 @@
 [package]
 name = "cargo_crates_ihor_milevskyi"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Ihor Milevskyi"]
 edition = "2021"
 description = "Firts cargo lib by Ihor Milevskyi"
