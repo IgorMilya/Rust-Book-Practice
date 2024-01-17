@@ -7,15 +7,23 @@ pub struct Config {
 }
 
 impl Config {
-    pub fn new(args: &[String]) -> Result<Config, &str> {
-        if args.len() < 3 {
-            return Err("not enough arguments");
-        }
+    pub fn new(mut args: env::Args) -> Result<Config, &'static str> {
+        args.next();
 
-        let query = args[1].clone();
-        let file_path = args[2].clone();
+        // let query = match args.next() {
+        //     Some(arg) => arg,
+        //     None => return Err("Did not get any query")
+        // };
+        // let file_path = match args.next() {
+        //     Some(arg) => arg,
+        //     None => return Err("Did not get any file_path")
+        // };
+
+        let query = args.next().ok_or("Did not get any query")?;
+        let file_path = args.next().ok_or("Did not get any file_path")?;
 
         let case_sensitive = env::var("IGNORE_CASE").is_ok();
+
         Ok(Config { query, file_path, case_sensitive })
     }
 

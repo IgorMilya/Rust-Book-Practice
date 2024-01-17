@@ -7,8 +7,7 @@ mod run;
 
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-    let config = Config::new(&args).unwrap_or_else(|err| {
+    let config = Config::new(env::args()).unwrap_or_else(|err| {
         utils::exit_with_error("Problem with arguments", err);
     });
 

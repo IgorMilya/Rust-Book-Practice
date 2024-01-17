@@ -3,8 +3,8 @@ struct Counter {
 }
 
 impl Counter {
-    fn new() -> Counter {
-        Counter { count: 0 }
+    fn new() -> Self {
+        Self { count: 0 }
     }
 }
 
